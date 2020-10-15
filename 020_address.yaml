@@ -1,0 +1,32 @@
+apiVersion: enmasse.io/v1beta1
+kind: Address
+metadata:
+  name: telemetry-hub.data
+  labels:
+    app: telemetry-hub
+spec:
+  address: data
+  type: queue
+  plan: standard-small-queue
+---
+apiVersion: enmasse.io/v1beta1
+kind: Address
+metadata:
+  name: telemetry-hub.test
+  labels:
+    app: telemetry-hub
+spec:
+  address: test
+  type: queue
+  plan: standard-small-queue
+---
+apiVersion: enmasse.io/v1beta1
+kind: Address
+metadata:
+  name: telemetry-hub.update
+  labels:
+    app: telemetry-hub
+spec:
+  address: update
+  type: multicast
+  plan: standard-small-multicast

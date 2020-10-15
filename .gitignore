@@ -1,0 +1,48 @@
+hack/
+stuff.md
+venv/
+test/*.crt
+test/*.json
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# golang
+go.sum
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+bin/
+dist/
+lib/
+lib64/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# binaries that could show-up
+test/selftest/selftest
+test/unittest/unittest
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE etc
+.vscode/
+.DS_Store
