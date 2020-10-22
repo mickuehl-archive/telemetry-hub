@@ -86,11 +86,11 @@ func main() {
 	// get command line options
 	flag.StringVar(&host, "host", "localhost", "Endpoint")
 	flag.StringVar(&port, "port", "1883", "Default port")
-	flag.StringVar(&protocol, "proto", "tcp", "Default protocol")
+	flag.StringVar(&protocol, "protocol", "tcp", "Default protocol")
 	flag.StringVar(&queue, "queue", "test", "Default queue")
 	flag.StringVar(&password, "password", "", "Password (optional)")
-	flag.StringVar(&user, "user", "", "User (optional)")
-	flag.BoolVar(&secure, "secure", false, "Use TLS")
+	flag.StringVar(&user, "user", "", "User name (optional)")
+	flag.BoolVar(&secure, "secure", false, "Use certificate (ca.cert) & TLS")
 	flag.Parse()
 
 	// setup and configuration
@@ -99,7 +99,7 @@ func main() {
 
 	opts := mqtt.NewClientOptions().AddBroker(broker)
 	opts.SetCleanSession(true)
-	opts.SetClientID("test1")
+	opts.SetClientID("test")
 	opts.SetConnectTimeout(10 * time.Second)
 	opts.SetOnConnectHandler(onConnect)
 	opts.SetDefaultPublishHandler(f)

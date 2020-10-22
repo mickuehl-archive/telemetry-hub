@@ -7,7 +7,7 @@ metadata:
 spec:
   address: data
   type: queue
-  plan: standard-small-queue
+  plan: standard-large-queue
 ---
 apiVersion: enmasse.io/v1beta1
 kind: Address
@@ -16,7 +16,7 @@ metadata:
   labels:
     app: telemetry-hub
 spec:
-  address: test
+  address: update
   type: queue
   plan: standard-small-queue
 ---
@@ -27,6 +27,6 @@ metadata:
   labels:
     app: telemetry-hub
 spec:
-  address: update
+  address: broadcast
   type: multicast
   plan: standard-small-multicast
