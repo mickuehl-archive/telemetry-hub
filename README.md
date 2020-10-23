@@ -74,3 +74,10 @@ Test the MQTT endpoint:
 cd test
 go run test.go -host <mqtt_endpoint_address> -port 443 -secure -protocol ssl -queue data
 ```
+
+### References
+
+* https://enmasse.io/documentation/
+* https://github.com/EnMasseProject/enmasse
+* https://access.redhat.com/documentation/en-us/red_hat_amq/7.7/html/installing_and_managing_amq_online_on_openshift/index
+* https://github.com/eclipse/paho.mqtt.golang
